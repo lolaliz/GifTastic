@@ -76,6 +76,14 @@ function renderButtons() {
   }
 }
 
+$("#add-animal").on("click", function(event) {
+event.preventDefault();
+var newAnimal = $("#animal-input").val().trim();
+topics.push(newAnimal);
+renderButtons()
+});
+
+
 $(document).on("click", ".animals", displayGIF);
 
 
