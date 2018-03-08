@@ -63,7 +63,7 @@ function renderButtons() {
   for (var i = 0; i < topics.length; i++) {
 
     // Then dynamicaly generating buttons for each item in the array.
-    // This code $("<button>") is all jQuery needs to create the start and end tag. (<button></button>)
+    
     var a = $("<button>");
     // Adding a class
     a.addClass("animals");
@@ -81,6 +81,7 @@ event.preventDefault();
 var newAnimal = $("#animal-input").val().trim();
 topics.push(newAnimal);
 renderButtons()
+$("#animal-input").val("")
 });
 
 
