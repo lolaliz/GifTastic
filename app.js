@@ -1,4 +1,4 @@
-// Initial array of topics
+
 var topics = ["lion", "elephant", "gazelle", "zebra"];
 
 function displayGIF () {
@@ -10,7 +10,7 @@ function displayGIF () {
         method: "GET"
       })
       .then(function(response){
-          console.log(response);
+          
         var results = response.data;
 
           for (var i = 0; i < results.length; i++) {
@@ -52,27 +52,19 @@ function displayGIF () {
 
 
 
-// Function for displaying GIF button
+
 function renderButtons() {
-
-  // Deleting the  buttons prior to adding new  buttons ??
-  // (this is necessary otherwise we will have repeat buttons)
+ 
   $("#buttons-view").empty();
-
-  // Looping through the array of topics
+ 
   for (var i = 0; i < topics.length; i++) {
-
-    // Then dynamicaly generating buttons for each item in the array.
-    
+  
     var a = $("<button>");
-    // Adding a class
-    a.addClass("animals");
-    // Adding a data-attribute with a value of the topic at index i
-    a.attr("data-name", topics[i]);
-    // Providing the button's text with a value of the topic at index i
+    a.addClass("animals"); 
+    a.attr("data-name", topics[i]);  
     a.text(topics[i]);
-    // Adding the button to the HTML
     $("#buttons-view").append(a);
+
   }
 }
 
